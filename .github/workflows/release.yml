@@ -37,8 +37,8 @@ jobs:
 
       - name: Build Docker image
         run: |
-          docker build -t ${{ secrets.DOCKER_USERNAME }}/api-spring-boot:${{ github.ref_name }} .
+          docker build -t ${{ secrets.DOCKER_USERNAME }}/api-java:latest .
 
       - name: Push Docker image
         run: |
-          docker push ${{ secrets.DOCKER_USERNAME }}/api-spring-boot:${{ github.ref_name }}
+          docker push ${{ secrets.DOCKER_USERNAME }}/api-java:latest
